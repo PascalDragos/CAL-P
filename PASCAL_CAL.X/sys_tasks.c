@@ -7,7 +7,7 @@
 
 #include "general.h"
 #include "sys_tasks.h"
-
+#include "light_sig.h"
 #include "mcal_init.h"
 #include "asw_com.h"
 
@@ -31,13 +31,18 @@ void TASK_5ms()
 
 void TASK_10ms()
 {   
-
+    //obstacleDetected(); 
 }
 
 void TASK_100ms()
 { 
+
+    lowBattery();
+    
+    
     
 }
+
 
 void TASK_500ms()
 { 
@@ -46,6 +51,7 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-    a = !a;
-    GPIO_u8WritePortPin(PORT_A, 10, a);
+  
+    
+    
 }
