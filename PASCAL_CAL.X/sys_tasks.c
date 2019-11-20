@@ -10,12 +10,14 @@
 #include "light_sig.h"
 #include "mcal_init.h"
 #include "asw_com.h"
+#include "asw_move.h"
 
 T_U16 a = 0;
 
 void TASK_Inits()
 {
     MCAL_vInit();
+    asw_moveInit();
     GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
 }
 
@@ -38,7 +40,7 @@ void TASK_100ms()
 { 
 
     lowBattery();
-    
+   
     
     
 }
@@ -46,12 +48,12 @@ void TASK_100ms()
 
 void TASK_500ms()
 { 
-
+    asw_moveUpAndDown();  
 }
 
 void TASK_1000ms()
 {
+ 
   
-    
     
 }
