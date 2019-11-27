@@ -17,8 +17,9 @@ extern "C" {
 #define RTE_vSetMotorDir hal_vSetMotorDir
 #define RTE_vSetMotionSpeed hal_vSetMotionSpeed
 #define RTE_vSetMotionDirection hal_vSetMotionDirection
+#define RTE_vInitServo hal_vInitServo
     
-
+    
 #ifdef	__cplusplus
 }
 #endif

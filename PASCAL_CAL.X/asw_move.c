@@ -2,16 +2,14 @@
 #include "rte.h"
 #include "general.h"
 #include "hal_dc.h"
+#include "hal_servo.h"
 
-
-extern void asw_moveInit()
+void asw_moveInit()
 {
     RTE_vInitMotor();
-  
-    
 }
 
-extern void asw_moveUpAndDown()
+void asw_moveUpAndDown()
 {
     static T_U16 time = 0;
     if(time == 0)
@@ -31,25 +29,53 @@ extern void asw_moveUpAndDown()
     
 }
 
+void asw_dirInit()
+{
+    RTE_vInitServo();
+}
 
-extern void asw_moveRightAndLeft()
+
+void asw_moveRightAndLeft()
 {
     static T_U16 time = 0;
-    if(time == 0)
+    switch(time)
     {
-        RTE_vSetMotionDirection(1);
+        case 1:hal_vSetMotionDirection(50);
+        break;
+        
+        case 2: hal_vSetMotionDirection(60);
+        break;
+        
+        case 3: hal_vSetMotionDirection(70);
+        break;
+        
+        case 4: hal_vSetMotionDirection(80);
+        break;
+        
+        case 5: hal_vSetMotionDirection(90);
+        break;
+        
+        case 6:hal_vSetMotionDirection(100);
+        break;
+        
+        case 7: hal_vSetMotionDirection(110);
+        break;
+        
+        case 8: hal_vSetMotionDirection(110);
+        break;
+        
+        case 9: hal_vSetMotionDirection(130);
+        break;
+        
+        default: hal_vSetMotionDirection(90);
     }
-    if(time == 5)
-    {
-        RTE_vSetMotionDirection(-1);
-    }
-      if(time == 5)
-    {
-        RTE_vSetMotionDirection(0);
-    }
-    if(time < 15)
+    
+    if(time < 9)
         ++time;
     else
         time = 0;
     
 }
+
+
+

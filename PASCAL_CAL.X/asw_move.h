@@ -14,7 +14,8 @@ extern "C" {
 
 extern void asw_moveInit();
 extern void asw_moveUpAndDown();
-
+void asw_dirInit();
+void asw_moveRightAndLeft();
 
 #ifdef	__cplusplus
 }

@@ -18,6 +18,7 @@ void TASK_Inits()
 {
     MCAL_vInit();
     asw_moveInit();
+    asw_dirInit();
     GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
 }
 
@@ -48,12 +49,13 @@ void TASK_100ms()
 
 void TASK_500ms()
 { 
-    asw_moveUpAndDown();  
+  //  asw_moveUpAndDown();  
+ 
 }
 
 void TASK_1000ms()
 {
- 
+    asw_moveRightAndLeft();
   
     
 }

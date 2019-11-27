@@ -23,7 +23,7 @@ void COM_vSendMessage(T_U8 u8Message);
 void COM_vStartListening(void);
 void COM_vProcessMessage(T_U8 u8Message);
 void COM_vProcessFIFO(void);
-
+void asw_dirInit();
 
 #endif	/* ASW_COM_H */
 
