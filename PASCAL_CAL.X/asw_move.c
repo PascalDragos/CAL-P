@@ -29,6 +29,14 @@ void asw_moveUpAndDown()
     
 }
 
+void asw_moveAhead()
+{
+    RTE_vSetMotorDir(forward);
+    RTE_vSetMotionSpeed(13);   
+}
+
+
+
 void asw_dirInit()
 {
     RTE_vInitServo();
@@ -78,4 +86,29 @@ void asw_moveRightAndLeft()
 }
 
 
-
+void asw_moveRightAndLeft2()
+{
+    static T_U16 time = 0;
+    switch(time)
+    {
+        case 1:hal_vSetMotionDirection(65);
+        break;
+        
+        case 2: hal_vSetMotionDirection(90);
+        break;
+        
+        case 3: hal_vSetMotionDirection(100);
+        break;
+        
+        case 4: hal_vSetMotionDirection(115);
+        break;
+        
+    }
+    
+    if(time < 5)
+        ++time;
+    else
+        time = 0;
+    
+    
+}

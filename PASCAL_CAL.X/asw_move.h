@@ -16,6 +16,8 @@ extern void asw_moveInit();
 extern void asw_moveUpAndDown();
 void asw_dirInit();
 void asw_moveRightAndLeft();
+void asw_moveRightAndLeft2();
+
 
 #ifdef	__cplusplus
 }

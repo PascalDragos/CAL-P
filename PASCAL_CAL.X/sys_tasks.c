@@ -11,6 +11,8 @@
 #include "mcal_init.h"
 #include "asw_com.h"
 #include "asw_move.h"
+#include "rte.h"
+#include "asw_lf.h"
 
 T_U16 a = 0;
 
@@ -41,8 +43,8 @@ void TASK_100ms()
 { 
 
     lowBattery();
-   
-    
+ 
+  //  asw_readLineFollower();
     
 }
 
@@ -50,12 +52,12 @@ void TASK_100ms()
 void TASK_500ms()
 { 
   //  asw_moveUpAndDown();  
- 
+    //asw_moveRightAndLeft2();
 }
 
 void TASK_1000ms()
 {
-    asw_moveRightAndLeft();
-  
-    
+   
+   // asw_readLineFollower();
+    moveOnWhite();
 }

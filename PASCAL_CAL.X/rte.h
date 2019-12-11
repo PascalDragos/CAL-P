@@ -20,6 +20,13 @@ extern "C" {
 #define RTE_vInitServo hal_vInitServo
     
     
+#define RTE_vSetLineFollower hal_vSetLineFollower
+#define RTE_vWriteLineFollower hal_vWriteLineFollower
+#define RTE_vGetLineFollwer hal_vGetLineFollwer
+    
+    
+    
+    
 #ifdef	__cplusplus
 }
 #endif
